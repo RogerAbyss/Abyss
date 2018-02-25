@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://gitee.com/rogerabyss/myrepo.git'
+
+platform :ios, '9.0'
+use_frameworks!
+
+target 'abyss' do
+    # skeleton UI
+    pod "SkeletonView", "~> 1.0.4"
+end
