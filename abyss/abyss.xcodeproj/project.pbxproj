@@ -16,6 +16,9 @@
 		6826C43E2042B13A00D2FD32 /* abyssTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C43D2042B13A00D2FD32 /* abyssTests.swift */; };
 		6826C4492042B13A00D2FD32 /* abyssUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C4482042B13A00D2FD32 /* abyssUITests.swift */; };
 		6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C45D2043DF0E00D2FD32 /* Log.swift */; };
+		6826C4612043E21C00D2FD32 /* Weex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C4602043E21C00D2FD32 /* Weex.swift */; };
+		68D7ECB82043EA4F002A7877 /* WeexBundler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D7ECB72043EA4F002A7877 /* WeexBundler.swift */; };
+		68D7ECBA2043EF00002A7877 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 68D7ECB92043EF00002A7877 /* index.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		6826C4482042B13A00D2FD32 /* abyssUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abyssUITests.swift; sourceTree = "<group>"; };
 		6826C44A2042B13A00D2FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6826C45D2043DF0E00D2FD32 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		6826C4602043E21C00D2FD32 /* Weex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weex.swift; sourceTree = "<group>"; };
+		68D7ECB72043EA4F002A7877 /* WeexBundler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeexBundler.swift; sourceTree = "<group>"; };
+		68D7ECB92043EF00002A7877 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		BDCB13B125797BC5FAC6FAD0 /* Pods-abyss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abyss.release.xcconfig"; path = "Pods/Target Support Files/Pods-abyss/Pods-abyss.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,7 @@
 		6826C45B2043DF0600D2FD32 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				6826C45F2043E1A000D2FD32 /* weex */,
 				6826C45C2043DF0600D2FD32 /* log */,
 			);
 			path = services;
@@ -165,6 +172,24 @@
 				6826C45D2043DF0E00D2FD32 /* Log.swift */,
 			);
 			path = log;
+			sourceTree = "<group>";
+		};
+		6826C45F2043E1A000D2FD32 /* weex */ = {
+			isa = PBXGroup;
+			children = (
+				68D7ECB62043EA4F002A7877 /* resources */,
+				6826C4602043E21C00D2FD32 /* Weex.swift */,
+			);
+			path = weex;
+			sourceTree = "<group>";
+		};
+		68D7ECB62043EA4F002A7877 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				68D7ECB92043EF00002A7877 /* index.js */,
+				68D7ECB72043EA4F002A7877 /* WeexBundler.swift */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		D7D089B88A55BACE10850DA7 /* Pods */ = {
@@ -190,7 +215,7 @@
 				D8C1FD90C2E49291C17FFA77 /* [CP] Embed Pods Frameworks */,
 				4DE97AB021083800F4194426 /* [CP] Copy Pods Resources */,
 				6826C4582043BC1E00D2FD32 /* Base Carthage */,
-				6826C4592043BCAD00D2FD32 /* ShellScript */,
+				6826C4592043BCAD00D2FD32 /* DEBUG Carthage */,
 			);
 			buildRules = (
 			);
@@ -291,6 +316,7 @@
 				6826C4332042B13900D2FD32 /* LaunchScreen.storyboard in Resources */,
 				6826C4302042B13900D2FD32 /* Assets.xcassets in Resources */,
 				6826C42E2042B13900D2FD32 /* Main.storyboard in Resources */,
+				68D7ECBA2043EF00002A7877 /* index.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,12 +394,13 @@
 			);
 			name = "Base Carthage";
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/WeexSDK.framework\n",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		6826C4592043BCAD00D2FD32 /* ShellScript */ = {
+		6826C4592043BCAD00D2FD32 /* DEBUG Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,6 +409,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FLEX.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GDPerformanceView.framework",
 			);
+			name = "DEBUG Carthage";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +442,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6826C42B2042B13900D2FD32 /* ViewController.swift in Sources */,
+				68D7ECB82043EA4F002A7877 /* WeexBundler.swift in Sources */,
 				6826C4292042B13900D2FD32 /* AppDelegate.swift in Sources */,
+				6826C4612043E21C00D2FD32 /* Weex.swift in Sources */,
 				6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +615,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXURG7KGEX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = abyss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zgxl.test003;
@@ -603,6 +637,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXURG7KGEX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = abyss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zgxl.test003;
