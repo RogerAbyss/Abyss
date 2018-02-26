@@ -15,6 +15,7 @@
 		6826C4332042B13900D2FD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6826C4312042B13900D2FD32 /* LaunchScreen.storyboard */; };
 		6826C43E2042B13A00D2FD32 /* abyssTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C43D2042B13A00D2FD32 /* abyssTests.swift */; };
 		6826C4492042B13A00D2FD32 /* abyssUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C4482042B13A00D2FD32 /* abyssUITests.swift */; };
+		6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C45D2043DF0E00D2FD32 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		6826C4442042B13A00D2FD32 /* abyssUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = abyssUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6826C4482042B13A00D2FD32 /* abyssUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abyssUITests.swift; sourceTree = "<group>"; };
 		6826C44A2042B13A00D2FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6826C45D2043DF0E00D2FD32 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		BDCB13B125797BC5FAC6FAD0 /* Pods-abyss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abyss.release.xcconfig"; path = "Pods/Target Support Files/Pods-abyss/Pods-abyss.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		6826C4272042B13900D2FD32 /* abyss */ = {
 			isa = PBXGroup;
 			children = (
+				6826C45A2043DEDC00D2FD32 /* framework */,
 				6826C4282042B13900D2FD32 /* AppDelegate.swift */,
 				6826C42A2042B13900D2FD32 /* ViewController.swift */,
 				6826C42C2042B13900D2FD32 /* Main.storyboard */,
@@ -138,6 +141,30 @@
 				6826C44A2042B13A00D2FD32 /* Info.plist */,
 			);
 			path = abyssUITests;
+			sourceTree = "<group>";
+		};
+		6826C45A2043DEDC00D2FD32 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				6826C45B2043DF0600D2FD32 /* services */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		6826C45B2043DF0600D2FD32 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				6826C45C2043DF0600D2FD32 /* log */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		6826C45C2043DF0600D2FD32 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				6826C45D2043DF0E00D2FD32 /* Log.swift */,
+			);
+			path = log;
 			sourceTree = "<group>";
 		};
 		D7D089B88A55BACE10850DA7 /* Pods */ = {
@@ -388,6 +415,7 @@
 			files = (
 				6826C42B2042B13900D2FD32 /* ViewController.swift in Sources */,
 				6826C4292042B13900D2FD32 /* AppDelegate.swift in Sources */,
+				6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
