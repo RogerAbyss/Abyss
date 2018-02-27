@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
         view.addSubview(button)
 
+        /**
+         Websocket
+         */
+        AppWebSocket.shared.connect()
     }
 
     @IBAction func crashButtonTapped(_ sender: AnyObject) {

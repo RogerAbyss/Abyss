@@ -9,7 +9,7 @@ reciver []
 
 for_lane :test do
 	reciver []
-	title "Abyss test"
+	title "Abyss 测试服更新"
 	content "Abyss update by AFastlane@0.0.4"
 	actionurl "https://github.com/RogerAbyss/Abyss/commits/master"
 	code """
@@ -19,7 +19,7 @@ end
 
 for_lane :beta do
 	reciver []
-	title "Abyss beta"
+	title "Abyss 预发布更新"
 	content "Abyss update by AFastlane@0.0.4"
 	actionurl "https://github.com/RogerAbyss/Abyss/commits/master"
 	code """
@@ -29,7 +29,7 @@ end
 
 for_lane :release do
 	reciver []
-	title "Abyss release"
+	title "Abyss 正式服上传AppStore了"
 	content "Abyss update by AFastlane@0.0.4"
 	actionurl "https://gitee.com/xl168/ZGXL_IOS/commits/AppStore"
 	code ""

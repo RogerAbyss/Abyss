@@ -10,6 +10,8 @@ import Foundation
 import WeexSDK
 
 /**
+ Weex
+ use 💙 to filter console info
  继承于Weex的UIViewController可以实现Weex
  */
 class Weex: UIViewController {

@@ -36,9 +36,7 @@ class WeexBundler {
     {
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileURL = documentsURL.appendingPathComponent("bundlejs/index.js")
-        
-        Log(fileURL.absoluteString)
-        
+
         if FileManager.default.fileExists(atPath: fileURL.absoluteString) {
             return fileURL
         } else {
