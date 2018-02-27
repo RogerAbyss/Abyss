@@ -216,6 +216,7 @@
 				4DE97AB021083800F4194426 /* [CP] Copy Pods Resources */,
 				6826C4582043BC1E00D2FD32 /* Base Carthage */,
 				6826C4592043BCAD00D2FD32 /* DEBUG Carthage */,
+				68944977204509FA00F87C11 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -415,6 +416,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n/usr/local/bin/carthage copy-frameworks\nfi";
+		};
+		68944977204509FA00F87C11 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 62f494ac09556c84387e2cd5273da74e567e0487 20fafbc98fb34ca6d1820a5d8539b7ea7e88bef4adf6f37403070ebad66d1a1a";
 		};
 		D8C1FD90C2E49291C17FFA77 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

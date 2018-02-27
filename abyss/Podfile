@@ -7,4 +7,8 @@ use_frameworks!
 target 'abyss' do
     # skeleton UI
     pod "SkeletonView", "~> 1.0.4"
+    
+    # Fabric & Crashlytics
+    pod 'Fabric'
+    pod 'Crashlytics'
 end

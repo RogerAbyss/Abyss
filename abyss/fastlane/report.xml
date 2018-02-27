@@ -5,74 +5,82 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.029911">
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.010652">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001568">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001039">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: import_from_git" time="8.048919">
+      <testcase classname="fastlane.lanes" name="02: import_from_git" time="5.156727">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: git_pull" time="10.46059">
+      <testcase classname="fastlane.lanes" name="03: git_pull" time="7.557461">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: pod_update" time="1.587794">
+      <testcase classname="fastlane.lanes" name="04: pod_update" time="2.473731">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: Switch to ios change lane" time="0.001114">
+      <testcase classname="fastlane.lanes" name="05: Switch to ios change lane" time="0.000981">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: update_info_plist" time="0.016748">
+      <testcase classname="fastlane.lanes" name="06: update_info_plist" time="0.011514">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: update_app_identifier" time="0.068706">
+      <testcase classname="fastlane.lanes" name="07: update_app_identifier" time="0.067503">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: increment_build_number" time="0.880281">
+      <testcase classname="fastlane.lanes" name="08: increment_build_number" time="1.03419">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: increment_version_number" time="0.581801">
+      <testcase classname="fastlane.lanes" name="09: increment_version_number" time="0.706968">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: match" time="10.604668">
+      <testcase classname="fastlane.lanes" name="10: match" time="5.558385">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: gym" time="140.179674">
+      <testcase classname="fastlane.lanes" name="11: gym" time="150.60934">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: get_version_number" time="0.298657">
+      <testcase classname="fastlane.lanes" name="12: get_version_number" time="0.38647">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="13: email" time="0.016343">
+      <testcase classname="fastlane.lanes" name="13: email" time="2.132016">
         
-          <failure message="/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:236:in `block in execute_action'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:231:in `chdir'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:231:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;../../../../../../../../var/folders/6n/6dzwr72n5hn660kfxvwdvf300000gn/T/fl_clone20180227-6346-1b4tb1q/AFastlane.git/fastlane/IOSAppFastfile:38:in `block in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/lane_manager.rb:57:in `cruise_lane'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:76:in `run!'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/commands_generator.rb:337:in `run'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/fastlane/lib/fastlane/cli_tools_distributor.rb:98:in `take_off'&#10;/usr/local/lib/ruby/gems/2.5.0/gems/fastlane-2.83.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;&#10;No such file or directory @ rb_sysopen - email.erb.html" />
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: git_add" time="0.112829">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: git_commit" time="0.611104">
         
       </testcase>
     
