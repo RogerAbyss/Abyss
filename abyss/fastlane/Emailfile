@@ -1,0 +1,46 @@
+# Email配置
+
+sender "492764029@qq.com"
+manager "roger_ren@qq.com"
+token "xfbjnudclefvbgei"
+action "更新历史"
+actionurl "#"
+reciver []
+
+for_lane :test do
+	reciver []
+	title "Abyss test"
+	content "Abyss update by AFastlane@0.0.4"
+	actionurl "https://github.com/RogerAbyss/Abyss/commits/master"
+	code """
+	<br><br><img src='https://gitee.com/rogerabyss/Assert/raw/master/Code/zgxl/code-zgxl-test.png' width='200px' height='200px'>
+	"""
+end
+
+for_lane :beta do
+	reciver []
+	title "Abyss beta"
+	content "Abyss update by AFastlane@0.0.4"
+	actionurl "https://github.com/RogerAbyss/Abyss/commits/master"
+	code """
+	<br><br><img src='https://gitee.com/rogerabyss/Assert/raw/master/Code/zgxl/code-zgxl-beta.png' width='200px' height='200px'>
+	"""
+end
+
+for_lane :release do
+	reciver []
+	title "Abyss release"
+	content "Abyss update by AFastlane@0.0.4"
+	actionurl "https://gitee.com/xl168/ZGXL_IOS/commits/AppStore"
+	code ""
+end
+
+# "610447442@qq.com" 小春
+# "349470694@qq.com" 红卫
+# "15922883743@163.com" 倩哥
+# "498434576@qq.com" 高兴
+# "9134457@qq.com" 黄总
+# "13566403@qq.com"  白总
+# "1918130@qq.com" 潘叔叔
+# "9883886@qq.com" 石总
+# "miaozhen000@126.com" 苗总
