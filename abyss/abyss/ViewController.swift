@@ -25,8 +25,8 @@ class ViewController: UIViewController {
 
     @IBAction func crashButtonTapped(_ sender: AnyObject) {
 //        Crashlytics.sharedInstance().crash()
-        let a = [""]
-        let b = a[2]
+//        let a = [""]
+//        let b = a[2]
     }
 
     override func didReceiveMemoryWarning() {
