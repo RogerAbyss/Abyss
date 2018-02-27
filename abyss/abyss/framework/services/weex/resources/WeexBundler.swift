@@ -17,7 +17,7 @@ class WeexBundler {
     /**
      服务器JSBundle的地址
      */
-    static let bundleUrl = "http://192.168.2.37:8081/dist/index.js"
+    static let bundleUrl = "http://192.168.2.2:8081/dist/index.js"
     
     /**
      开关

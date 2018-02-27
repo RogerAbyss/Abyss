@@ -98,7 +98,7 @@ extension Weex {
         WXSDKEngine.initSDKEnvironment()
         
         #if DEBUG
-            WXLog.setLogLevel(WXLogLevel.all)
+            WXLog.setLogLevel(WXLogLevel.warning)
         #else
             WXLog.setLogLevel(WXLogLevel.error)
         #endif
