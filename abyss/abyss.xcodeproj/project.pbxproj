@@ -24,6 +24,7 @@
 		6894498620452B2500F87C11 /* AppGlobalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894498420452B2500F87C11 /* AppGlobalManager.swift */; };
 		6894498A20452BA400F87C11 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894498920452BA400F87C11 /* AppInfo.swift */; };
 		6894498D2045309900F87C11 /* AppWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894498C2045309900F87C11 /* AppWebSocket.swift */; };
+		6894499020464F1F00F87C11 /* WeexImgLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894498F20464F1F00F87C11 /* WeexImgLoader.swift */; };
 		68D7ECB82043EA4F002A7877 /* WeexBundler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D7ECB72043EA4F002A7877 /* WeexBundler.swift */; };
 		68D7ECBA2043EF00002A7877 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 68D7ECB92043EF00002A7877 /* index.js */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		6894498420452B2500F87C11 /* AppGlobalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGlobalManager.swift; sourceTree = "<group>"; };
 		6894498920452BA400F87C11 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		6894498C2045309900F87C11 /* AppWebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWebSocket.swift; sourceTree = "<group>"; };
+		6894498F20464F1F00F87C11 /* WeexImgLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeexImgLoader.swift; sourceTree = "<group>"; };
 		68D7ECB72043EA4F002A7877 /* WeexBundler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeexBundler.swift; sourceTree = "<group>"; };
 		68D7ECB92043EF00002A7877 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		BDCB13B125797BC5FAC6FAD0 /* Pods-abyss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abyss.release.xcconfig"; path = "Pods/Target Support Files/Pods-abyss/Pods-abyss.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				68D7ECB92043EF00002A7877 /* index.js */,
 				68D7ECB72043EA4F002A7877 /* WeexBundler.swift */,
+				6894498F20464F1F00F87C11 /* WeexImgLoader.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				6894498620452B2500F87C11 /* AppGlobalManager.swift in Sources */,
 				6826C42B2042B13900D2FD32 /* ViewController.swift in Sources */,
 				68D7ECB82043EA4F002A7877 /* WeexBundler.swift in Sources */,
+				6894499020464F1F00F87C11 /* WeexImgLoader.swift in Sources */,
 				6894498A20452BA400F87C11 /* AppInfo.swift in Sources */,
 				6826C4292042B13900D2FD32 /* AppDelegate.swift in Sources */,
 				6826C4612043E21C00D2FD32 /* Weex.swift in Sources */,

@@ -163,7 +163,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   data: function data() {
     return {
-      logo: 'https://gitee.com/rogerabyss/Assert/raw/master/CI/cat.png'
+      logo: 'https://gitee.com/rogerabyss/Assert/raw/master/CI/office.jpg'
     };
   }
 };

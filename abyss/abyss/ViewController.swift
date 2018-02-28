@@ -9,7 +9,7 @@
 import UIKit
 import Crashlytics
 
-class ViewController: UIViewController {
+class ViewController: Weex {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func crashButtonTapped(_ sender: AnyObject) {
-//        Crashlytics.sharedInstance().crash()
-//        let a = [""]
-//        let b = a[2]
+        Crashlytics.sharedInstance().crash()
+        let a = [""]
+        let b = a[2]
     }
 
     override func didReceiveMemoryWarning() {

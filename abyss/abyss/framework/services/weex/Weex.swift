@@ -99,6 +99,11 @@ extension Weex {
         
         WXSDKEngine.initSDKEnvironment()
         
+        /**
+         注册图片下载协议
+        */
+        WXSDKEngine.registerHandler(WeexImgLoader(), with: WXImgLoaderProtocol.self)
+        
         #if DEBUG
             WXLog.setLogLevel(WXLogLevel.warning)
         #else
