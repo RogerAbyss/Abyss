@@ -17,6 +17,10 @@
 		6826C4492042B13A00D2FD32 /* abyssUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C4482042B13A00D2FD32 /* abyssUITests.swift */; };
 		6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C45D2043DF0E00D2FD32 /* Log.swift */; };
 		6826C4612043E21C00D2FD32 /* Weex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6826C4602043E21C00D2FD32 /* Weex.swift */; };
+		689381642047FE9300843151 /* ReactNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689381622047FE9300843151 /* ReactNativeViewController.swift */; };
+		689381672047FEA800843151 /* WeexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689381662047FEA800843151 /* WeexViewController.swift */; };
+		689381692047FEB400843151 /* IOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689381682047FEB400843151 /* IOSViewController.swift */; };
+		6893816D2047FF4400843151 /* RootHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6893816C2047FF4400843151 /* RootHome.swift */; };
 		6894498020452AEB00F87C11 /* PluginPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894497D20452AEB00F87C11 /* PluginPermission.swift */; };
 		6894498120452AEB00F87C11 /* PluginDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894497E20452AEB00F87C11 /* PluginDebug.swift */; };
 		6894498220452AEB00F87C11 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894497F20452AEB00F87C11 /* Plugin.swift */; };
@@ -64,6 +68,10 @@
 		6826C44A2042B13A00D2FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6826C45D2043DF0E00D2FD32 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		6826C4602043E21C00D2FD32 /* Weex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weex.swift; sourceTree = "<group>"; };
+		689381622047FE9300843151 /* ReactNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeViewController.swift; sourceTree = "<group>"; };
+		689381662047FEA800843151 /* WeexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeexViewController.swift; sourceTree = "<group>"; };
+		689381682047FEB400843151 /* IOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSViewController.swift; sourceTree = "<group>"; };
+		6893816C2047FF4400843151 /* RootHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHome.swift; sourceTree = "<group>"; };
 		6894497D20452AEB00F87C11 /* PluginPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginPermission.swift; sourceTree = "<group>"; };
 		6894497E20452AEB00F87C11 /* PluginDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginDebug.swift; sourceTree = "<group>"; };
 		6894497F20452AEB00F87C11 /* Plugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 		6826C4272042B13900D2FD32 /* abyss */ = {
 			isa = PBXGroup;
 			children = (
+				689381602047FE5D00843151 /* ViewControllers */,
 				6826C45A2043DEDC00D2FD32 /* framework */,
 				6826C4282042B13900D2FD32 /* AppDelegate.swift */,
 				6826C42A2042B13900D2FD32 /* ViewController.swift */,
@@ -202,6 +211,25 @@
 				6826C4602043E21C00D2FD32 /* Weex.swift */,
 			);
 			path = weex;
+			sourceTree = "<group>";
+		};
+		689381602047FE5D00843151 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689381612047FE7800843151 /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		689381612047FE7800843151 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				689381622047FE9300843151 /* ReactNativeViewController.swift */,
+				689381662047FEA800843151 /* WeexViewController.swift */,
+				689381682047FEB400843151 /* IOSViewController.swift */,
+				6893816C2047FF4400843151 /* RootHome.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		6894497B20452AEB00F87C11 /* plugin */ = {
@@ -502,11 +530,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-abyss/Pods-abyss-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/GLog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689381672047FEA800843151 /* WeexViewController.swift in Sources */,
 				6894498620452B2500F87C11 /* AppGlobalManager.swift in Sources */,
 				6826C42B2042B13900D2FD32 /* ViewController.swift in Sources */,
 				68D7ECB82043EA4F002A7877 /* WeexBundler.swift in Sources */,
@@ -527,10 +566,13 @@
 				6894498A20452BA400F87C11 /* AppInfo.swift in Sources */,
 				6826C4292042B13900D2FD32 /* AppDelegate.swift in Sources */,
 				6826C4612043E21C00D2FD32 /* Weex.swift in Sources */,
+				6893816D2047FF4400843151 /* RootHome.swift in Sources */,
 				6826C45E2043DF0E00D2FD32 /* Log.swift in Sources */,
 				6894498120452AEB00F87C11 /* PluginDebug.swift in Sources */,
 				6894498220452AEB00F87C11 /* Plugin.swift in Sources */,
 				6894498D2045309900F87C11 /* AppWebSocket.swift in Sources */,
+				689381692047FEB400843151 /* IOSViewController.swift in Sources */,
+				689381642047FE9300843151 /* ReactNativeViewController.swift in Sources */,
 				6894498020452AEB00F87C11 /* PluginPermission.swift in Sources */,
 				6894498520452B2500F87C11 /* AppGlobalConfiguration.swift in Sources */,
 			);

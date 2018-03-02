@@ -134,10 +134,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Folly/folly.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GLog/glog.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/React/React.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/yoga/yoga.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Folly/folly.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GLog/glog.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/React/React.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/yoga/yoga.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

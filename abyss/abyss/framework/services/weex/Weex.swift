@@ -57,10 +57,9 @@ class Weex: UIViewController {
             Log("💙 updateFinish")
         }
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(weexBundlerDownloadComplete),
-                                               name: NSNotification.Name(rawValue: NotificationSignWeexBundlerDownloadComplete),
-                                               object: nil)
+        if let url = WeexBundler.pathOfJSBundle() {
+            instance?.render(with: url, options: ["bundleUrl" : url.absoluteString], data: nil)
+        }
     }
     
     
@@ -75,15 +74,6 @@ extension Weex {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-}
-
-// MARK: - 事件处理中心
-extension Weex {
-    @objc func weexBundlerDownloadComplete() {
-        if let url = WeexBundler.pathOfJSBundle() {
-            instance?.render(with: url, options: ["bundleUrl" : url.absoluteString], data: nil)
-        }
     }
 }
 
