@@ -25,7 +25,7 @@ settings:
         - "./src"
 rules: 
   react/jsx-filename-extension: off
-  # react/prefer-stateless-function: warn
+  react/prefer-stateless-function: warn
   react/prop-types: off
   dot-notation: warn
 
