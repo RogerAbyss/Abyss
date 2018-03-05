@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-666" y="251"/>
         </scene>
-        <!--iOS-->
+        <!--Swift-->
         <scene sceneID="hVm-35-gkS">
             <objects>
                 <viewController id="6Xc-hM-Mgn" customClass="IOSViewController" customModule="abyss" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hRD-Wh-KRc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="iOS" id="UgJ-Pm-rN5"/>
+                    <tabBarItem key="tabBarItem" title="Swift" id="UgJ-Pm-rN5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHQ-jP-Tf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
