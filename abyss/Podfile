@@ -21,7 +21,7 @@ target 'abyss' do
         'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
         'RCTNetwork',
         'RCTText',
-#        'RCTImage',
+        'RCTImage',
         'RCTWebSocket', # needed for debugging
         # Add any other subspecs you want to use in your project
     ]

@@ -25,17 +25,11 @@ class ReactNativeViewController: UIViewController {
     
     func initReactNativeView() {
         let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-        let mockData:NSDictionary = ["scores":
-            [
-                ["name":"Alex", "value":"42"],
-                ["name":"Joel", "value":"10"]
-            ]
-        ]
         
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "AReactNative",
-            initialProperties: mockData as [NSObject : AnyObject],
+            initialProperties: nil,
             launchOptions: nil
         )
         

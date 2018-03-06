@@ -31,6 +31,9 @@ PODS:
   - React/PrivateDatabase (0.53.0)
   - React/RCTBlob (0.53.0):
     - React/Core
+  - React/RCTImage (0.53.0):
+    - React/Core
+    - React/RCTNetwork
   - React/RCTNetwork (0.53.0):
     - React/Core
   - React/RCTText (0.53.0):
@@ -51,6 +54,7 @@ DEPENDENCIES:
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
   - React/RCTNetwork (from `../node_modules/react-native`)
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
@@ -78,8 +82,8 @@ SPEC CHECKSUMS:
   GLog: ed471a3ad6ad53eefb343a530f15dad283e5ef51
   React: af66244a7d630be2aef03b4ddfe3570e4eff39fc
   SkeletonView: a601f98b51087aa475f324cc26792b9cd9d46770
-  yoga: e2a57c51bc6d27c7f4dc2c4d503d87bf13b2760b
+  yoga: fd9dd87e2e4f2e47c3ce18e14e916e862fb452f1
 
-PODFILE CHECKSUM: 57d6bcd87139aadcb39d4335d21fef3bc4185ea2
+PODFILE CHECKSUM: 8ae8d01dc4ae76385f98d497c430a3d5596f64d0
 
 COCOAPODS: 1.4.0
