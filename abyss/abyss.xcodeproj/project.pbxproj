@@ -305,7 +305,6 @@
 				6826C4222042B13900D2FD32 /* Frameworks */,
 				6826C4232042B13900D2FD32 /* Resources */,
 				D8C1FD90C2E49291C17FFA77 /* [CP] Embed Pods Frameworks */,
-				4DE97AB021083800F4194426 /* [CP] Copy Pods Resources */,
 				6826C4582043BC1E00D2FD32 /* Base Carthage */,
 				6826C4592043BCAD00D2FD32 /* DEBUG Carthage */,
 				68944977204509FA00F87C11 /* Crashlytics */,
@@ -448,21 +447,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4DE97AB021083800F4194426 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-abyss/Pods-abyss-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6826C4582043BC1E00D2FD32 /* Base Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,7 +471,6 @@
 			);
 			name = "Base Carthage";
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/WeexSDK.framework\n",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

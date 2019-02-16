@@ -41,8 +41,8 @@ extension GitHub: TargetType {
         }
     }
 
-    var validate: Bool {
-        return true
+    var validationType: ValidationType {
+        return .successAndRedirectCodes
     }
 
     var headers: [String: String]? {
@@ -51,8 +51,7 @@ extension GitHub: TargetType {
 }
 
 extension GitHub: Equatable {
-
-    static func ==(lhs: GitHub, rhs: GitHub) -> Bool {
+    static func == (lhs: GitHub, rhs: GitHub) -> Bool {
         switch (lhs, rhs) {
         case (.zen, .zen): return true
         case let (.userProfile(username1), .userProfile(username2)): return username1 == username2
@@ -65,9 +64,9 @@ func url(_ route: TargetType) -> String {
     return route.baseURL.appendingPathComponent(route.path).absoluteString
 }
 
-let failureEndpointClosure = { (target: GitHub) -> Endpoint<GitHub> in
+let failureEndpointClosure = { (target: GitHub) -> Endpoint in
     let error = NSError(domain: "com.moya.moyaerror", code: 0, userInfo: [NSLocalizedDescriptionKey: "Houston, we have a problem"])
-    return Endpoint<GitHub>(url: url(target), sampleResponseClosure: {.networkError(error)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
+    return Endpoint(url: url(target), sampleResponseClosure: {.networkError(error)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 
 enum HTTPBin: TargetType {
@@ -75,13 +74,14 @@ enum HTTPBin: TargetType {
     case post
     case upload(file: URL)
     case uploadMultipart([MultipartFormData], [String: Any]?)
+    case validatedUploadMultipart([MultipartFormData], [String: Any]?, [Int])
 
     var baseURL: URL { return URL(string: "http://httpbin.org")! }
     var path: String {
         switch self {
         case .basicAuth:
             return "/basic-auth/user/passwd"
-        case .post, .upload, .uploadMultipart:
+        case .post, .upload, .uploadMultipart, .validatedUploadMultipart:
             return "/post"
         }
     }
@@ -90,7 +90,7 @@ enum HTTPBin: TargetType {
         switch self {
         case .basicAuth:
             return .get
-        case .post, .upload, .uploadMultipart:
+        case .post, .upload, .uploadMultipart, .validatedUploadMultipart:
             return .post
         }
     }
@@ -101,7 +101,7 @@ enum HTTPBin: TargetType {
         return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .upload(let fileURL):
             return .uploadFile(fileURL)
-        case .uploadMultipart(let data, let urlParameters):
+        case .uploadMultipart(let data, let urlParameters), .validatedUploadMultipart(let data, let urlParameters, _):
             if let urlParameters = urlParameters {
                 return .uploadCompositeMultipart(data, urlParameters: urlParameters)
             } else {
@@ -114,13 +114,22 @@ enum HTTPBin: TargetType {
         switch self {
         case .basicAuth:
             return "{\"authenticated\": true, \"user\": \"user\"}".data(using: String.Encoding.utf8)!
-        case .post, .upload, .uploadMultipart:
+        case .post, .upload, .uploadMultipart, .validatedUploadMultipart:
             return "{\"args\": {}, \"data\": \"\", \"files\": {}, \"form\": {}, \"headers\": { \"Connection\": \"close\", \"Content-Length\": \"0\", \"Host\": \"httpbin.org\" },  \"json\": null, \"origin\": \"198.168.1.1\", \"url\": \"https://httpbin.org/post\"}".data(using: String.Encoding.utf8)!
         }
     }
 
     var headers: [String: String]? {
         return nil
+    }
+
+    var validationType: ValidationType {
+        switch self {
+        case .validatedUploadMultipart(_, _, let codes):
+            return .customCodes(codes)
+        default:
+            return .none
+        }
     }
 }
 
@@ -169,6 +178,24 @@ extension GitHubUserContent: TargetType {
 
     public var headers: [String: String]? {
         return nil
+    }
+}
+
+// MARK: - Upload Multipart Helpers
+
+extension HTTPBin {
+    static func createTestMultipartFormData() -> [MultipartFormData] {
+        guard let url = Bundle(for: MoyaProviderSpec.self).url(forResource: "testImage", withExtension: "png") else {
+            fatalError("Resource testImage.png could not be found in bundle")
+        }
+        let string = "some data"
+        guard let data = string.data(using: .utf8) else {
+            fatalError("Failed creating Data from String \(string)")
+        }
+        return [
+            MultipartFormData(provider: .file(url), name: "file", fileName: "testImage"),
+            MultipartFormData(provider: .data(data), name: "data")
+        ]
     }
 }
 
@@ -225,4 +252,17 @@ extension ImageType {
 struct Issue: Codable {
     let title: String
     let createdAt: Date
+    let rating: Float?
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case createdAt
+        case rating
+    }
+}
+
+// A fixture for testing optional Decodable mapping
+struct OptionalIssue: Codable {
+    let title: String?
+    let createdAt: Date?
 }
